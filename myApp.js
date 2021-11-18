@@ -15,6 +15,9 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + "/views/index.html");
 });
 
+//Task 3 this includes static files from the dir/public directory when /public is routed
+app.use("/public", express.static(__dirname + "/public"));
+
 
 
 
