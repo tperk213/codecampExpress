@@ -2,8 +2,14 @@ var express = require('express');
 var app = express();
 
 require('dotenv').config();
+var bodyParser = require('body-parser');
 
 console.log("Hello World");
+
+//task 10ish
+//  set up app to use the data in a post request
+app.use(bodyParser.urlencoded({extended:false}));
+app.use(bodyParser.json());
 
 // Task 1 sending html as response
 // app.get('/', (req, res) => {
