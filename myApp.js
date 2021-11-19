@@ -33,21 +33,21 @@ app.get('/', (req, res) => {
 //Task 3 this includes static files from the dir/public directory when /public is routed
 app.use("/public", express.static(__dirname + "/public"));
 
-app.get("/json", (req, res) => {
-    res.json(
-        {message: "Hello json"}
-    );
-});
+// app.get("/json", (req, res) => {
+//     res.json(
+//         {message: "Hello json"}
+//     );
+// });
 
 app.get("/json", (req, res) => {
     if (process.env.MESSAGE_STYLE === "uppercase"){
         res.json(
-            {messege: "HELLO JSON"}
+            {message: "HELLO JSON"}
         );
     }else
     {
         res.json(
-            {messege: "Hello json"}
+            {message: "Hello json"}
         );
     }
 });
