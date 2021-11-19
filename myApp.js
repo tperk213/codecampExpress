@@ -55,6 +55,13 @@ app.get("/now", (req, res, next) =>{
     }
 );
 
+//echo server 
+app.get("/:word/echo", (req, res) =>{
+        res.json({
+            echo: req.params.word
+        });
+});
+
 
 
 
