@@ -42,6 +42,29 @@ app.get("/json", (req, res) => {
 });
 
 
+//task chain middle wear to get time Server
+// adds a time field to re1 object and sends json response of this time to page
+app.get("/now", (req, res, next) =>{
+    req.time = new Date().toString();
+    next();
+    },
+    (req, res) => {
+        res.json(
+            {time: req.time}
+        );
+    }
+);
+
+
+
+
+
+
+
+
+
+
+
 
 
 // function tomsLogger(req, res, next){
