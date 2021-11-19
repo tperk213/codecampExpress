@@ -63,6 +63,13 @@ app.get("/:word/echo", (req, res) =>{
 });
 
 
+app.get("/name", (req, res)=>{
+    res.json({
+        name: req.query.first + ' ' + req.query.last
+    });
+});
+
+
 
 
 
